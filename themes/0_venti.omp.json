@@ -5,13 +5,13 @@
             "alignment": "left",
             "segments": [
                 {
-                    "foreground": "#94ffa2",
-                    "leading_diamond": "<#ff70a6> \ue200 </>",
+                    "foreground": "#ff70a6",
+                    "leading_diamond": "<#94ffa2> \u256d\u2500\ue0b6 </>",
                     "properties": {
                         "display_host": true
                     },
                     "style": "diamond",
-                    "template": "{{ .UserName }} <#ffffff>on</>",
+                    "template": "{{ .UserName }} <#ffffff>on</> ",
                     "type": "session"
                 },
                 {
