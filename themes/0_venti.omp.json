@@ -119,13 +119,13 @@
             "segments": [
                 {
                     "properties": {
-                        "time_format": "Kitchen"
+                        "time_format": "Monday <#ffffff>at</> 3:04 PM"
                     },
                     "background": "#94ffa2",
                     "foreground": "#292929",
                     "style": "diamond",
                     "leading_diamond": "\u2570\u2500\ue0b6",
-                    "template": "\uf673",
+                    "template": " {{ .CurrentDate | date .Format }} ",
                     "trailing_diamond": "\ue0b4",
                     "type": "time"
                 }
