@@ -5,6 +5,16 @@
             "alignment": "left",
             "segments": [
                 {
+                    "foreground": "#94ffa2",
+                    "leading_diamond": "<#ff70a6> \ue200 </>",
+                    "properties": {
+                        "display_host": true
+                    },
+                    "style": "diamond",
+                    "template": "{{ .UserName }} <#ffffff>on</>",
+                    "type": "session"
+                },
+                {
                     "background": "#61AFEF",
                     "foreground": "#ffffff",
                     "leading_diamond": "\ue0b6",
@@ -93,11 +103,11 @@
                     "properties": {
                         "always_enabled": true
                     },
-                    "background": "#fb7e14",
+                    "background": "#94ffa2",
                     "foreground": "#292929",
                     "style": "diamond",
                     "leading_diamond": "\u2570\u2500\ue0b6",
-                    "template": "\ufb26",
+                    "template": "\uf673",
                     "trailing_diamond": "\ue0b4",
                     "type": "path"
                 }
