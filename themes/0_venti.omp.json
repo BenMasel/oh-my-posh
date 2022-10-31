@@ -35,9 +35,9 @@
                     "type": "path"
                 },
                 {
-                    "foreground": "#81ff91",
-                    "style": "powerline",
-                    "powerline_symbol": "\ue0b0",
+                    "foreground": "#ffffff",
+                    "style": "diamond",
+                    "leading_diamond": "\ue0b0",
                     "background_templates": [
                         "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
                         "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
@@ -45,10 +45,11 @@
                     ],
                     "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}\uF295 ",
                     "properties": {
-                        "discharging_icon": "\uE231 ",
-                        "charging_icon": "\uE234 ",
-                        "charged_icon": "\uE22F "
+                        "discharging_icon": "\uE231",
+                        "charging_icon": "\uE234",
+                        "charged_icon": "\uE22F"
                     },
+                    "trailing_diamond": "\ue0b0",
                     "type": "battery"
                 },
                 {
