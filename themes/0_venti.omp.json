@@ -84,6 +84,25 @@
                 }
             ],
             "type": "prompt"
+        },
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "properties": {
+                        "always_enabled": true
+                    },
+                    "background": "#fb7e14",
+                    "foreground": "#292929",
+                    "style": "diamond",
+                    "leading_diamond": "\u2570\u2500\ue0b6",
+                    "template": "\ufb26",
+                    "trailing_diamond": "\ue0b4",
+                    "type": "path"
+                }
+            ],
+            "type": "prompt"
         }
     ],
     "final_space": true,
