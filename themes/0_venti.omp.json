@@ -77,6 +77,22 @@
                     "style": "diamond",
                     "template": "<#ffffff>\uf6dc</> <#ffffff>RAM:</> {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB ",
                     "type": "sysinfo"
+                },
+                {
+                    "foreground": "#81ff91",
+                    "style": "diamond",
+                    "foreground_templates": [
+                        "{{if eq \"Charging\" .State.String}}#81ff91{{end}}",
+                        "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
+                        "{{if eq \"Full\" .State.String}}#4caf50{{end}}"
+                    ],
+                    "template": "<#ffffff>\uf6dc</> <#ffffff>BAT:</> {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}\uF295 ",
+                    "properties": {
+                        "discharging_icon": "\uE231",
+                        "charging_icon": "\uE234",
+                        "charged_icon": "\uE22F"
+                    },
+                    "type": "battery"
                 }
             ],
             "type": "prompt"
