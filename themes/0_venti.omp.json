@@ -18,7 +18,6 @@
                     "background": "#C678DD",
                     "foreground": "#ffffff",
                     "leading_diamond": "\ue0b6",
-                    "trailing_diamond": "\ue0b0",
                     "properties": {
                         "style": "full"
                     },
