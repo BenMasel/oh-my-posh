@@ -1,0 +1,127 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+        {
+            "alignment": "left",
+            "segments": [
+                {
+                    "foreground": "#ff70a6",
+                    "leading_diamond": "<#94ffa2>\u256d\u2500 </>",
+                    "properties": {
+                        "display_host": true
+                    },
+                    "style": "diamond",
+                    "template": "{{ .UserName }} <#ffffff>on</> ",
+                    "type": "session"
+                },
+                {
+                    "background": "#C678DD",
+                    "foreground": "#ffffff",
+                    "leading_diamond": "\ue0b6",
+                    "properties": {
+                        "style": "full"
+                    },
+                    "style": "diamond",
+                    "template": " {{ .Path }} ",
+                    "type": "path"
+                },
+                {
+                    "background": "#95ffa4",
+                    "foreground": "#193549",
+                    "style": "diamond",
+                    "template": "<parentBackground>\ue0b0</> {{ .HEAD }} \uf292 ",
+                    "type": "git"
+                },
+                {
+                    "background": "#FF6471",
+                    "foreground": "#ffffff",
+                    "leading_diamond": "<transparent,background>\ue0b0</>",
+                    "style": "diamond",
+                    "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
+                    "trailing_diamond": "\ue0b4",
+                    "type": "python"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "right",
+            "segments": [
+                {
+                    "foreground": "#a9ffb4",
+                    "style": "plain",
+                    "type": "text"
+                },
+                {
+                    "foreground": "#a9ffb4",
+                    "properties": {
+                        "style": "dallas",
+                        "threshold": 0
+                    },
+                    "style": "diamond",
+                    "template": " {{ .FormattedMs }}s <#ffffff>\ue601</>",
+                    "type": "executiontime"
+                },
+                {
+                    "properties": {
+                        "root_icon": "\uf292 "
+                    },
+                    "style": "diamond",
+                    "template": " \uf0e7 ",
+                    "type": "root"
+                },
+                {
+                    "foreground": "#94ffa2",
+                    "style": "diamond",
+                    "template": " <#ffffff>CPU:</> {{ round .PhysicalPercentUsed .Precision }}% ",
+                    "type": "sysinfo"
+                },
+                {
+                    "foreground": "#81ff91",
+                    "style": "diamond",
+                    "template": "<#ffffff>\uf142</> <#ffffff>RAM:</> {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB ",
+                    "type": "sysinfo"
+                },
+                {
+                    "foreground": "#ffffff",
+                    "style": "powerline",
+                    "powerline_symbol": "\ue0b0",
+                    "background_templates": [
+                        "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
+                        "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
+                        "{{if eq \"Full\" .State.String}}#4caf50{{end}}"
+                    ],
+                    "template": "{{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}\uF295",
+                    "properties": {
+                        "discharging_icon": "\uE231",
+                        "charging_icon": "\uE234",
+                        "charged_icon": "\uE22F"
+                    },
+                    "type": "battery"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "properties": {
+                        "time_format": "Monday <#ffffff>at</> 3:04 PM"
+                    },
+                    "background": "#94ffa2",
+                    "foreground": "#292929",
+                    "style": "diamond",
+                    "leading_diamond": "\u2570\u2500\ue0b6",
+                    "template": " {{ .CurrentDate | date .Format }} ",
+                    "trailing_diamond": "\ue0b4",
+                    "type": "time"
+                }
+            ],
+            "type": "prompt"
+        }
+    ],
+    "final_space": true,
+    "version": 2
+}
