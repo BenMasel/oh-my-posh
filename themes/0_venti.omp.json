@@ -87,12 +87,12 @@
             "segments": [
                 {
                     "foreground": "#ffafd2",
-                    "leading_diamond": "<#ff70a6> \u256d\u2500 </><#ffafd2>{</>",
+                    "leading_diamond": "<#ff70a6> \u2570\u2500 </><#ffafd2>{</>",
                     "properties": {
                         "folder_icon": "\uf07b",
                         "folder_separator_icon": "\uf9e0",
                         "home_icon": "home",
-                        "style": "agnoster_full"
+                        "style": "full"
                     },
                     "style": "diamond",
                     "template": " \ue5ff {{ .Path }} ",
