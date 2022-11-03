@@ -86,7 +86,7 @@
                         "{{if eq \"Discharging\" .State.String}}#FF9180{{end}}",
                         "{{if eq \"Full\" .State.String}}#9080FF{{end}}"
                     ],
-                    "template": "<#ffffff>\uf6dc</> <#ffffff>BAT:</> {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}\uF295 ",
+                    "template": "<#ffffff>\uf6dc</> <#ffffff>BAT:</> {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}% ",
                     "properties": {
                         "discharging_icon": "\uE231",
                         "charging_icon": "\uE234",
@@ -105,9 +105,6 @@
                     "foreground": "#ffafd2",
                     "leading_diamond": "<#ff70a6> \u2570\u2500 </><#ffafd2>{</>",
                     "properties": {
-                        "folder_icon": "\uf07b",
-                        "folder_separator_icon": "\uf9e0",
-                        "home_icon": "home",
                         "style": "full"
                     },
                     "style": "diamond",
